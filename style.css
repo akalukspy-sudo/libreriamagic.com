@@ -1,0 +1,190 @@
+/*modo claro*/
+body{
+    margin: 0;
+    background-color:white;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+header{
+    height: 15vh;
+    background-color:#E6DAC8;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.titulo {
+  text-align: center;   /* centra el texto horizontalmente */
+}
+
+
+
+main{
+    height: 70vh;
+    overflow: auto;
+    padding: 20px;
+    background-color:white;
+
+}
+footer{
+   
+ height: 15vh; 
+ background-color: #E6DAC8;
+  color: black; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+ text-align: right; 
+
+         
+  gap: 20px;                  /* espacio entre cada elemento */
+
+
+
+}
+
+
+/*modo oscuro */
+.dark{
+    margin: 0;
+    background-color:black;
+    color: white;
+    transition: 0.3s;
+   
+}
+.dark header{
+    height: 15vh;
+    background-color: #071018;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+ .dark footer{
+   height: 15vh;
+    background-color: #071018;
+    color:azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right; 
+ }
+ .dark main{
+     height: 70vh;
+    overflow: auto;
+    padding: 20px;
+    background-color:#5E6D88;
+ }
+.grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+.card{
+    background-color:#FAF9F6;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgb(0,0,0,0.2);
+     border: 2px solid transparent; /* sin borde visible por defecto */
+
+
+}
+.card:hover {
+  border: 2px solid black; /* aparece el borde negro al pasar el mouse */
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card img:hover{
+    transform: scale(1.05);
+}
+.logo{
+   position: absolute;
+   top: 0px;
+   left: 0;
+   z-index:1000;
+}
+.card h3{
+    color: green;
+}
+.card h2{
+    color: rgb(104, 86, 60);
+    padding: 10px;
+   
+}
+.card button{
+    width: 100%;
+    height: 5%;
+    align-items:center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color:#E6DAC8;
+    color: black;
+    border-color:rgb(216, 192, 162);
+}
+/*estilo para la modal*/
+.modal{
+     display: none;
+     position: fixed;
+     z-index: 1000;
+     inset: 0;/*posicioa la ventana modal en los 4 lado*/
+     background-color: rgba(0,0,0,0.9);
+     justify-content: center;
+     align-items: center;
+
+}
+.modal-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content p{
+    
+    color: white;
+   
+
+}
+.modal-imagen{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-imagen img{
+    max-width:100% ;
+    max-height: 100%;
+    object-fit: contain;
+    animation: zoom 0.3s ease;
+}
+.cerrar{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+.modo{
+    position: fixed;   /* se mantiene fijo aunque hagas scroll */
+  top: 20px;         /* distancia desde arriba */
+  right: 20px;       /* distancia desde la derecha */
+  padding: 10px 20px;
+  background-color: #9BA8AB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
